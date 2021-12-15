@@ -21,7 +21,7 @@ You will also need to have the `lego_batman` movie yuv files:
 
 #  How to run the experiment
 
-* `streamlit run meta_data_avg_inference.py -- --frame_index` 
+* `streamlit run inference.py -- --frame_index` 
 This opens in the browser where we can use a slider to change the attributes.
 You can change the frame of the lego-batman movie that you need to display. The deafult takes the frame 300.
 Note: You need to use -- --frame_index to parse streamlit.
