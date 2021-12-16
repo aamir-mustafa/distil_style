@@ -13,8 +13,9 @@ import numpy as np
 from aamir_utils import *
 from torchvision import datasets, models
 import torchvision.transforms as transforms
-import time
-import matplotlib.pyplot as plt
+from utils_color_conversion import *
+import streamlit as st
+
 #import dataloader_full_only
 #from gfxdisp_python.gfxdisp.color import *
 #from gfxdisp_python.gfxdisp.pfs import pfs
@@ -211,9 +212,7 @@ def repeat_histogram(input_hist):
     return features   
 #%%
 
-from utils_color_conversion import *
-import matplotlib.pyplot as plt
-import streamlit as st
+
  
 vid_dir = "../../video"
 vid_name = "lego_batman"
