@@ -28,6 +28,6 @@ You can change the frame of the lego_batman movie that you need to display. The 
 
 Note: You need to use -- --frame_index to parse streamlit.
 
-At every step on changing the attribute the inference runs on the GPU. Please check whether torch.cuda.is_available() is True
+At every step on changing the attribute the inference runs on the GPU. Please check whether torch.cuda.is_available() is True.
 
 The starting point of attributes in the slider are the average values across all frames. These need not be the best values for that particular frame.
