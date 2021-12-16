@@ -3,8 +3,8 @@
 This repository lets you visualise how the image changes when we change the attributes. This is a pilot experiment where I have chosen the previously trained model.
 I have devised it experiment to understand whether the idea of changing the attribute matrix changes the display image.
 
-* `TODO`: Look into better encoding methods, by which we can actually interpret the attributes.
-* `TODO`: Reduce the number of sttributes. right now its 9 (for the pilot experiment).
+* `TODO`: Look into better encoding methods, by which we can actually interpret the attributes. This could be done with adding the complete image histogram alongside the neighbouring histogram.
+* `TODO`: Reduce the number of attributes. right now its 9 (for the pilot experiment).
 
 
 # Some requirements
