@@ -11,7 +11,7 @@ I have devised it experiment to understand whether the idea of changing the attr
 
 * `Pytorch` 
 * `Torchvision` 
-* `Streamlit`, please do pip install streamlit
+* `Streamlit`, please do `pip install streamlit`
 
 You will also need to have the `lego_batman` movie yuv files:
 
