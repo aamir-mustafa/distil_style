@@ -15,8 +15,8 @@ I have devised it experiment to understand whether the idea of changing the attr
 
 You will also need to have the `lego_batman` movie yuv files:
 
-* `../../video/lego_batman_4k/lego_batman_960x540_420_2020_10b.yub`
-* `../../video/lego_batman_hd/lego_batman_960x540_420_709_8b.yub`
+* `../../video/lego_batman_4k/lego_batman_960x540_420_2020_10b.yuv`
+* `../../video/lego_batman_hd/lego_batman_960x540_420_709_8b.yuv`
 
 
 #  How to run the experiment
