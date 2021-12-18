@@ -31,3 +31,7 @@ Note: You need to use -- --frame_index to parse streamlit.
 At every step on changing the attribute the inference runs on the GPU. Please check whether torch.cuda.is_available() is True.
 
 The starting point of attributes in the slider are the average values across all frames. These need not be the best values for that particular frame.
+
+This should automatically open a new browser tab with the UI.
+
+![image](gifs/gif_screencast.gif)
