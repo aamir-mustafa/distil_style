@@ -34,4 +34,4 @@ The starting point of attributes in the slider are the average values across all
 
 This should automatically open a new browser tab with the UI.
 
-![image](gifs/gif_screencast.gif)
+![image](gif/gif_screencast.gif)
