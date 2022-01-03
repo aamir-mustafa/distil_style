@@ -23,8 +23,11 @@ You will also need to have the `lego_batman` movie yuv files:
 #  How to run the experiment
 
 * `streamlit run inference.py -- --frame_index 300` 
-This opens in the browser where we can use a slider to change the attributes.
+This opens in the browser where we can use a slider to change the attributes. This run will have 9 attributes.
 You can change the frame of the lego_batman movie that you need to display. The deafult takes the frame 300.
+
+* `streamlit run inference_3_attributes.py -- --frame_index 300`
+This run has 3 attributes which can be fine tuned for the desired output.
 
 Note: You need to use -- --frame_index to parse streamlit.
 
