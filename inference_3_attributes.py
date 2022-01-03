@@ -1,5 +1,6 @@
 #import dataloader_yuv
 import torch
+# Git Code: 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
 from argparse import ArgumentParser
 #from models import HDRnetModel, Cl_HDRnetModel
 from torchvision.utils import save_image
@@ -304,9 +305,9 @@ if True:
 #    new_meta_data= np.array([[s1, s2/10, s3*-10], [s4, s5, s6], [s7*-1, s8, s9/100] ]).astype('float32')
     new= torch.from_numpy(new_meta_data).cuda()
 #    
-    meta_data_first= np.array([[s1*-1]]).astype('float32')
-    meta_data_second=np.array([[s2]]).astype('float32')
-    meta_data_third= np.array([[s3*-1]]).astype('float32')
+    meta_data_first= torch.from_numpy(np.array([[s1*-1]]).astype('float32')).cuda()
+    meta_data_second=torch.from_numpy(np.array([[s2]]).astype('float32')).cuda()
+    meta_data_third=torch.from_numpy(np.array([[s3*-1]]).astype('float32')).cuda()
 
     pred_first=  torch.matmul(torch.unsqueeze(encoded_matrix[:,0],1), meta_data_first/10000)
     pred_second= torch.matmul(torch.unsqueeze(encoded_matrix[:,1],1), meta_data_second/10000)
