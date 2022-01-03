@@ -13,6 +13,7 @@ I have devised it experiment to understand whether the idea of changing the attr
 * `Torchvision` 
 * `Pillow`, please do `pip install pillow`  
 * `Streamlit`, please do `pip install streamlit`
+* `Bokeh`, please do `pip install bokeh`
 
 You will also need to have the `lego_batman` movie yuv files:
 
