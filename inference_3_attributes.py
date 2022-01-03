@@ -16,7 +16,7 @@ from torchvision import datasets, models
 import torchvision.transforms as transforms
 from utils_color_conversion import *
 import streamlit as st
-
+from bokeh.plotting import figure
 #import dataloader_full_only
 #from gfxdisp_python.gfxdisp.color import *
 #from gfxdisp_python.gfxdisp.pfs import pfs
@@ -273,7 +273,7 @@ if True:
 #    save_image(torch.clamp(full, 0., 1.), 'A/In/'+file_name+'.png')                       
     hdr_matrix = get_polynomial_matrix_fourth(full) # 4th degree polynomial
     
-    encoded_matrix = encoder(hdr_matrix)  # shape is torch.Size([518400, 2]) for this case
+    encoded_matrix = encoder(hdr_matrix)  # shape is torch.Size([518400, 3]) for this case
     
     
     target = yf_sdr.get_frame_rgb(i)
@@ -347,8 +347,39 @@ if True:
     display_pil_img= to_pil(to_display)
     display_pil_target= to_pil(target_to_display)
     
+    x_axis= np.linspace(0.0, 0.7, 100)
+    x= full.clone()
+    gray_value= np.zeros((100,))
+    
+    for ii in range(100):
+#        print('Running loop for tone curve generation')
+        x[0, :, :], x[1, :, :], x[2, :, :]= x_axis[ii],x_axis[ii],x_axis[ii]
+        hdr_matrix = get_polynomial_matrix_fourth(x)
+        encoded_matrix = encoder(hdr_matrix)
+        
+        pred_first=  torch.matmul(torch.unsqueeze(encoded_matrix[:,0],1), meta_data_first/10000)
+        pred_second= torch.matmul(torch.unsqueeze(encoded_matrix[:,1],1), meta_data_second/10000)
+        pred_third= torch.matmul(torch.unsqueeze(encoded_matrix[:,2],1), meta_data_third/10000)
+        
+        pred_3_channels = torch.cat((pred_first, pred_second, pred_third), dim =-1)
+    
+        
+        pred= torch.matmul(encoded_matrix, new)
+        
+        out= pred*0.7 + pred_3_channels*0.3
+        out_= ((out[0][0]+ out[0][1]+ out[0][2])/3).detach().cpu().numpy()
+        gray_value[ii]= out_
+    
+    
     st.image(display_pil_img, 'Changed Image')
     st.image(display_pil_target, 'Ground Truth SDR Image')
+    
+    p = figure(title ='Tone Curve', x_axis_label= 'Input HDR (rec2020)', y_axis_label='Output SDR (rec2020)' )
+    
+    p.line(x_axis, gray_value)
+    
+    st.bokeh_chart(p, use_container_width= True)
+    
 #    save_image(to_display, 'A/Demo/'+file_name+'.png')            
 #    
 #    if i==310:
