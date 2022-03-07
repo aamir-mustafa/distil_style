@@ -1,3 +1,9 @@
+
+# ECCV Experiments
+* `streamlit run streamlit_3_Latents.py -- --frame_index 300`
+
+I have already stored a sample datafile in gfxdisp. Please see the requirements section below.
+
 # color_grading_experiments
 
 This repository lets you visualise how the image changes when we change the attributes. This is a pilot experiment where I have chosen the previously trained model.
