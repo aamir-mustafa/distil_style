@@ -1,7 +1,7 @@
 
 # ECCV Experiments
 * `streamlit run streamlit_3_Latents.py -- --frame_index 300`
-
+* `streamlit run streamlit_2_Latents.py -- --frame_index 188`
 I have already stored a sample datafile in gfxdisp. Please see the requirements section below.
 
 # color_grading_experiments
