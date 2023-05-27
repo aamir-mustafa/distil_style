@@ -26,6 +26,9 @@ You will also need to have the movie yuv files:
 * `../../video/movie_name_4k/movie_name_960x540_420_2020_10b.yuv`
 * `../../video/movie_name_hd/movie_name_960x540_420_709_8b.yuv`
 
+# Test
+* `python inference.py`
+
 # Running Inference on Streamlit
 * `streamlit run streamlit_3_Latents.py -- --frame_index <frame_number>`
 * `streamlit run streamlit_2_Latents.py -- --frame_index <frame_number>`
