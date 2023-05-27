@@ -83,7 +83,7 @@ def get_polynomial_matrix_fourth(full):
    
 #%%
 
-# /anfs/gfxdisp/am2806/video
+# Please use your own video/movie clips
 vid_dir = "/anfs/gfxdisp/am2806/video"
 vid_name = "planet_earth_e3_jungles"
 ###

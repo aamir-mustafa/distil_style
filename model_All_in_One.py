@@ -1,3 +1,6 @@
+
+# This contains the model for Conditional Invertible Neural Network
+
 import torch
 import torch.nn as nn
 import torch.optim
