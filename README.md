@@ -5,6 +5,8 @@
 
 This repository provides code for Distilling Style from Image Pairs for Global Forward and Inverse Tone Mapping.
 
+![Figure 1](gif/teaser_distil_style.png)
+
 ## Description
 
 Many image enhancement or editing operations, such as forward and inverse tone mapping or color grading, do not have a unique solution, but instead a range of solutions, each representing a differentß style. Despite this, existing learning-based methods attempt to learn a unique mapping, disregarding this style. In this work, we show that information about the style can be distilled from collections of image pairs and encoded into a 2- or 3-dimensional vector. This gives us not only an efficient representation but also an interpretable latent space for editing the image style. We represent the global color mapping between a pair of images as a custom normalizing flow, conditioned on a polynomial basis of the pixel color. We show that such a network is more effective than PCA or VAE at encoding image style in low-dimensional space and lets us obtain an accuracy close to 40\,dB, which is about 7-10 dB improvement over the state-of-the-art methods.
